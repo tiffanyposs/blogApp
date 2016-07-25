@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+	<head>
+		<script src="../node_modules/angular/angular.min.js"></script>
+		<!-- Firebase -->
+	    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	    <!-- AngularFire -->
+	    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="mainController">
+		  <ul>
+            <li ng-repeat="rule in rulename">{{ rule.rulename }}</li>
+          </ul>
+
+          <input type="text" ng-model="newRule"/>
+          <input type="button" value="AddRule" ng-click="addRule()" />
+		</div>
+	</body>
+</html>
